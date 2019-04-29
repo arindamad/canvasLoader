@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas practice</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+</head>
+<style>
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    canvas {
+        display: block;
+    }
+
+    #count {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #000;
+        font-size: 10vh;
+
+    }
+
+    .counters::after {
+        content: '%';
+        display: inline-block;
+
+    }
+
+    .eachProgress {
+        width: 100%;
+        float: left;
+        margin-bottom: 30px;
+    }
+
+    .relative {
+        position: relative;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <section>
+        <div class="container">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+        
+        </div>
+    </section>
+    <section class="grandParent">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-ms-3 col-sm-6 col-6 ">
+                    <div class="eachProgress relative full">
+                        <canvas id="canvas1" data-parcent=90 class="ariProgress"></canvas>
+                        <h2>javascript</h2>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-ms-3 col-sm-6 col-6">
+                    <div class="eachProgress relative full">
+                        <canvas id="canvas2" data-parcent=80 class="ariProgress"></canvas>
+                        <h2>HTML</h2>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-ms-3 col-sm-6 col-6">
+                    <div class="eachProgress relative full">
+                        <canvas id="canvas3" data-parcent=70 class="ariProgress"></canvas>
+                        <h2>CSS</h2>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-ms-3 col-sm-6 col-6">
+                    <div class="eachProgress relative full">
+                        <canvas id="canvas4" data-parcent=50 class="ariProgress"></canvas>
+                        <h2>JQuery</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+            <div class="container">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas qui odio modi exercitationem ducimus animi neque molestiae reprehenderit maxime voluptate provident, sunt veniam eos voluptatum dolorum deserunt nisi cum? Quaerat!</p>
+            
+            </div>
+        </section>
+
+
+    <!-- <canvas data-parcent=60 class="ariProgress"></canvas> -->
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
+    <script src="js.js" type="text/javascript"></script>
+</body>
+
+</html>
